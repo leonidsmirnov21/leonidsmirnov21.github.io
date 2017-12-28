@@ -76,21 +76,38 @@ img {
     cursor: pointer;
 }
 
+.main-logo[href]:hover,
+.main-logo[href]:focus {
+    color: rgba(0, 0, 0, 0.6);
+    outline-color: #000000;
+}
+
+.main-logo[href]:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
 .header-navigation {
     display: flex;
     align-items: center;
 }
 
 .search {
-    position: relative;
+    display: flex;
+    width: 440px;
+    
+    margin-right: 100px;
+    box-sizing: border-box;
+}
+
+.search-input {
     display: block;
-    width: 240px;
-    margin-right: 300px;
-    padding: 0 40px;
+    width: 355px;
+    padding: 7px 40px;
     
     font: inherit;
     font-size: 15px;
     line-height: 36px;
+    font-weight: 300;
     color: rgba(0, 0, 0, 0.3);
     
     border: none;
@@ -101,11 +118,52 @@ img {
     background-position: left center;
     
     box-sizing: border-box;
+}
+
+.search-input:focus,
+.search-input:valid {
+    color: #000000;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #000000;
+    outline: none;
+}
+
+.search-button {
+    display: none;
+    width: 85px;
+    padding: 5px;
     
+    font: inherit;
+    font-size: 15px;
+    line-height: 36px;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    
+    background-color: transparent;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.search-button:hover,
+.search-button:focus {
+    background-color: #000000;
+    color: rgba(255, 255, 255, 1);
+    outline: none;
+}
+
+.search-button:active {
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+.search-input:focus + .search-button,
+.search-input:valid + .search-button {
+    display: block;
 }
 
 .entrance {
-    position: relative;
     margin-right: 210px;
     padding-left: 27px;
     
@@ -120,8 +178,17 @@ img {
     text-decoration: none;
 }
 
+.entrance:hover,
+.entrance:focus {
+    color: rgba(0, 0, 0, 0.6);
+    outline-color: #000000;
+}
+
+.entrance:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
 .comparison {
-    position: relative;
     font-size: 15px;
     line-height: 36px;
     color: #000000;
@@ -132,6 +199,16 @@ img {
     
     padding-left: 27px;
     text-decoration: none;
+}
+
+.comparison:hover,
+.comparison:focus {
+    color: rgba(0, 0, 0, 0.6);
+    outline-color: #000000;
+}
+
+.comparison:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .basket {
@@ -148,6 +225,16 @@ img {
     background-position: left center;
     
     text-decoration: none;
+}
+
+.basket:hover,
+.basket:focus {
+    color: rgba(0, 0, 0, 0.6);
+    outline-color: #000000;
+}
+
+.basket:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .main-menu,
@@ -169,6 +256,11 @@ img {
 .menu-item:nth-of-type(1) {
     width: 240px;
     margin-right: 300px;
+    
+    background-image: url("../img/plus.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 16px 16px;
 }
 
 .menu-item:nth-of-type(2) {
@@ -194,6 +286,16 @@ img {
     text-decoration: none;
 }
 
+.menu-item:hover > a,
+.menu-item > a:focus {
+    color: rgba(0, 0, 0, 0.6);
+    outline-color: #000000;
+}
+
+.menu-item > a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
 .sub-menu {
     display: none;
     flex-wrap: wrap;
@@ -214,7 +316,7 @@ img {
     display: flex;
 }
 
-.sub-item a{
+.sub-item a {
     font-size: 15px;
     line-height: 36px;
     font-weight: 300;
@@ -222,6 +324,16 @@ img {
     color: #000000;
     
     text-decoration: none;
+}
+
+.sub-item a:hover,
+.sub-item a:focus {
+    color: rgba(0, 0, 0, 0.6);
+    outline-color: #000000;
+}
+
+.sub-item a:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .first-column {
@@ -318,6 +430,10 @@ img {
 .slide-button:focus::before {
     transform: scaleY(5);
     transition-duration: 0.2s;
+}
+
+.slide-button:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .slider-item-1,
@@ -457,7 +573,7 @@ img {
 }
 
 .popular {
-    padding-top: 200px;
+    padding-top: 160px;
     margin-bottom: 190px;
 }
 
@@ -472,9 +588,14 @@ img {
 }
 
 .product-popular {
+
+}
+
+.product-popular a {
     position: relative;
     display: block;
     width: 160px;
+    padding-top: 40px;
     
     font-family: "Gilroy";
     font-size: 18px;
@@ -482,12 +603,14 @@ img {
     font-weight: 800;
     letter-spacing: 0.01px;
     color: #000000;
+    text-decoration: none;    
+    cursor: pointer;
 }
 
-.product-popular::before {
+.product-popular a::before {
     content: "";
     position: absolute;
-    top: -200px;
+    top: -160px;
     left: 0;
     width: 100%;
     height: 160px;
@@ -495,29 +618,38 @@ img {
     
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
 }
 
-.product-popular:nth-of-type(1)::before {
+.product-popular a:hover::before {
+    background-color: #f0c52e;
+}
+
+.product-popular a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.product-popular:nth-of-type(1) a::before {
     background-image: url("../img/popular-1.svg");
 }
 
-.product-popular:nth-of-type(2)::before {
+.product-popular:nth-of-type(2) a::before {
     background-image: url("../img/popular-2.svg");
 }
 
-.product-popular:nth-of-type(3)::before {
+.product-popular:nth-of-type(3) a::before {
     background-image: url("../img/popular-3.svg");
 }
 
-.product-popular:nth-of-type(4)::before {
+.product-popular:nth-of-type(4) a::before {
     background-image: url("../img/popular-4.svg");
 }
 
-.product-popular:nth-of-type(5)::before {
+.product-popular:nth-of-type(5) a::before {
     background-image: url("../img/popular-5.svg");
 }
 
-.product-popular:nth-of-type(6)::before {
+.product-popular:nth-of-type(6) a::before {
     background-image: url("../img/popular-6.svg");
 }
 
@@ -570,6 +702,10 @@ img {
     box-sizing: border-box;
     cursor: pointer;
     z-index: 10;
+}
+
+.service-controls label:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .service-controls label::before {
@@ -867,6 +1003,10 @@ img {
     text-align: center;
 }
 
+.about-us-button:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
 .about-us-button::before {
     content: "";
     position: absolute;
@@ -935,6 +1075,10 @@ img {
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
+}
+
+.contacts-button:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .contacts-button::before {
