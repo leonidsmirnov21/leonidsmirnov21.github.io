@@ -304,7 +304,7 @@ img {
 .slide-button::before {
     content: "";
     position: absolute;
-    top: 16px;
+    top: 17px;
     left: 0;
     z-index: -1;
     width: 100%;
@@ -525,6 +525,10 @@ img {
     display: flex;
     background-color: #e5e5e5;
     padding-bottom: 140px;
+}
+
+.service .container {
+    display: flex;
 }
 
 .service-controls {
@@ -866,7 +870,7 @@ img {
 .about-us-button::before {
     content: "";
     position: absolute;
-    top: 16px;
+    top: 17px;
     left: 0;
     z-index: -1;
     width: 100%;
@@ -936,7 +940,7 @@ img {
 .contacts-button::before {
     content: "";
     position: absolute;
-    top: 16px;
+    top: 17px;
     left: 0;
     z-index: -1;
     width: 100%;
