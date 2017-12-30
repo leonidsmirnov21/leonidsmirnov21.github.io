@@ -258,18 +258,49 @@
                    </p>
                    
                    <div class="contacts-map">
-                       <img src="img/map.jpg" width="560" height="222" alt="карта">
+                       <img class="img-map" src="img/map.jpg" width="560" height="222" alt="карта">
                    </div>
                    
                    <a href="#" class="contacts-button">Напишите нам</a>
                </div>
+               
+               <div class="map-popup">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1177667971347!2d37.52794430005891!3d55.68694026066142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1514663359425" allowfullscreen></iframe>
+                   
+                   <button class="map-popup-close" type="button">Закрыть</button>
+               </div>
+               
+               <div class="pre-form"></div>
+               <form action="https://echo.htmlacademy.ru/" method="post" class="write-us">
+                   <div class="data">
+                       <p class="input-name">
+                           <label for="name">Ваше имя:</label>
+                           <input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
+                       </p>
+
+                       <p class="input-email">
+                           <label for="email">Ваш e-mail:</label>
+                           <input type="email" id="email" name="email" placeholder="Для отправки ответа">
+                       </p>
+                   </div>
+                   
+                   <p class="input-text">
+                       <label for="text">Текст письма:</label>
+                       <textarea id="text" name="text" placeholder="В свободной форме"></textarea>
+                   </p>
+                   
+                   <p class="sending">
+                       <input type="submit" class="sending-button" value="Отправить">
+                   </p>
+                   
+                   <button class="write-us-close" type="button">Закрыть</button>
+               </form>
            </section>
           
            </div>
        </main>
        
        <footer class="main-footer">
-           <div class="container">
            <section class="footer-navigation">
                <h2 class="visually-hidden">Навигация в подвале</h2>
                
@@ -338,7 +369,6 @@
 
                 </a>
             </section>
-           </div>
        </footer>
    
    <script src="js/script.js"></script>
