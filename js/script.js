@@ -18,15 +18,6 @@ map.addEventListener("click", function (evt) {
     mapPopup.classList.add("write-us-show");
 });
 
-map.addEventListener("touchstart", function (evt) {
-//    evt.preventDefault();
-//    mapPopup.classList.remove("write-us-none");
-//    preForm.classList.remove("write-us-none");
-//    preForm.classList.add("write-us-show");
-    alert("Touched");
-    mapPopup.classList.add("write-us-show");
-});
-
 closeMap.addEventListener("click", function (evt) {
     evt.preventDefault();
     mapPopup.classList.add("write-us-none");
