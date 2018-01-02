@@ -83,6 +83,14 @@ input[name="menu"] {
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
+    
+    transform: scale(0.8);
+    transition-duration: 0.2s;
+}
+
+.controls label:hover {
+    transform: scale(1);
+    transition-duration: 0.2s;
 }
 
 .controls label:nth-of-type(1) {
@@ -120,8 +128,8 @@ input[name="menu"] {
 }
 
 .about-me {
-    height: 100%;
     display: none;
+    height: 100%;
     flex-direction: column;
     padding-right: 100px;
     
@@ -141,8 +149,8 @@ input[name="menu"] {
 }
 
 .projects {
-    height: 100%;
     display: none;
+    height: 100%;
     flex-direction: column;
     padding-right: 100px;
     
@@ -209,10 +217,28 @@ input[name="menu"] {
     height: 100%;
 }
 
+@keyframes block-move {
+    0% {
+        opacity: 0;
+        transform: translateY(-1000px);
+    }
+    
+    70% {
+        opacity: 0.5;
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .home:checked ~ .main-block .teaser,
 .me:checked ~ .main-block .about-me,
 .sites:checked ~ .main-block .projects {
     display: flex;
+    animation-name: block-move;
+    animation-duration: 0.3s;
 }
 
 .main-footer {
