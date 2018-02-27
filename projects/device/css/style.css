@@ -45,7 +45,7 @@ img {
     position: relative;
     
     margin-bottom: -27px;
-    padding: 50px 60px 169px 60px;
+    padding: 40px 60px 169px 60px;
     
     background-color: #f7e296;
 }
@@ -89,6 +89,7 @@ img {
 .header-navigation {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .search {
@@ -348,7 +349,7 @@ img {
     width: 160px;
 }
 
-main {
+.main-main {
     min-width: 1200px;
 }
 
@@ -1658,10 +1659,229 @@ main {
     opacity: 0.3;
 }
 
+/*catalog.html*/
+
+.catalog-header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 40px;
+    padding: 40px 60px 20px 60px;
+    
+    background-color: #f7e296;
+}
+
+.catalog-header-navigation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sub-catalog {
+    padding-top: 0;
+    bottom: -120px;
+}
+
+.catalog-title {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    padding-left: 60px;
+    
+    font-family: "Gilroy";
+    font-size: 47px;
+    line-height: 47px;
+    font-weight: 800;
+    letter-spacing: 0.01px;
+}
+
+.breadcrumbs {
+    margin: 0;
+    margin-bottom: 47px;
+    padding: 0;
+    padding-left: 60px;
+    list-style: none;
+}
+
+.breadcrumbs li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 39px;
+}
+
+.breadcrumbs a {
+    font-size: 14px;
+    line-height: 36px;
+    color: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+.breadcrumbs li:not(:last-of-type)::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 7px;
+    top: 16px;
+    right: -20px;
+    
+    background-image: url("../img/nav-arrow.svg");
+    background-repeat: no-repeat;
+}
+
+.breadcrumbs a[href]:hover,
+.breadcrumbs a[href]:focus,
+.breadcrumbs a[href]:active {
+    color: #000000;
+}
+
+.catalog-main {
+    min-width: 1200px;
+}
+
+.filter-sort {
+    width: 100%;
+    background-image: linear-gradient(to right, #e4e4e4 40.428%, #f1f1f1 40.428%);
+}
+
+.filter-sort .container {
+    display: flex;
+}
+
+.filter-title {
+    width: 328px;
+    margin: 0;
+    padding: 26px 0 26px 60px;
+    
+    font-family: "Gilroy";
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    color: #000000;
+    text-transform: uppercase;
+    
+    background-color: #e4e4e4;
+    box-sizing: border-box;
+}
+
+.sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 832px;
+    padding-left: 72px;
+    
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+}
+
+.type-sorting {
+    display: flex;
+}
+
+.type-sorting h3 {
+    margin: 0;
+    margin-right: 55px;
+    padding: 26px 0 26px 60px;
+    
+    font-family: "Gilroy";
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.by-price {
+    display: none;
+}
+
+.by-price + label {
+    margin-right: 30px;
+    padding: 26px 0;
+    
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.3);
+    
+    cursor: pointer;
+}
+
+.by-price:last-of-type + label {
+    margin-right: 0;
+}
+
+.by-price:checked + label {
+    color: #000000;
+}
+
+.direct-sorting {
+    display: flex;
+    margin-left: auto;
+}
+
+.direct-sorting input {
+    display: none;
+}
+
+.direct-sorting input + label {
+    display: block;
+    width: 11px;
+    height: 10px;
+    
+    background-repeat: no-repeat;
+    
+    cursor: pointer;
+}
+
+.direct-sorting input:first-of-type + label {
+    background-image: url("../img/icon-up-dir.svg");
+    opacity: 0.3;
+}
+
+.direct-sorting input:last-of-type + label {
+    margin-left: 12px;
+    
+    background-image: url("../img/icon-down-dir.svg");
+    opacity: 0.3;
+}
+
+.direct-sorting input:checked + label {
+    opacity: 1;
+}
 
 
+.filter-catalog {
+    width: 100%;
+    background-image: linear-gradient(to right, #f1f1f1 40.428%, #ffffff 40.428%);
+}
 
+.filter-catalog .container {
+    display: flex;
+}
 
+.filter {
+    width: 328px;
+    display: flex;
+    flex-direction: column;
+    
+    padding-left: 60px;
+    
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+}
+
+.catalog {
+    width: 832px;
+    
+    background-color: #ffffff;
+}
 
 
 
