@@ -84,7 +84,7 @@ input[name="menu"] {
     background-size: cover;
     cursor: pointer;
     
-    transform: scale(0.8);
+    transform: scale(0.6);
     transition-duration: 0.2s;
 }
 
@@ -231,6 +231,12 @@ input[name="menu"] {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.home:checked ~ .main-block .controls label[for="home"],
+.me:checked ~ .main-block .controls label[for="me"],
+.sites:checked ~ .main-block .controls label[for="sites"] {
+    transform: scale(1);
 }
 
 .home:checked ~ .main-block .teaser,
