@@ -8,7 +8,14 @@ var closeMap = document.querySelector(".map-popup-close");
 var inputName = popup.querySelector("[name=name]");
 var inputEmail = popup.querySelector("[name=email]");
 var inputText = popup.querySelector("[name=text");
-var storage = localStorage.getItem("inputName");
+var isStorageSupport = true;
+var sorage = "";
+
+try {
+    storage = localStorage.getItem("inputName");
+} catch (err) {
+    isStorageSupport = false;
+}
 
 map.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -46,6 +53,9 @@ link.addEventListener("click", function (evt) {
         inputEmail.focus();
     } else {
         inputName.focus();
+        if (isStorageSupport) {
+            localStorage.setItem("inputName", inputName.value);
+        }
     }
 });
           
